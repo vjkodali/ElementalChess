@@ -83,12 +83,215 @@ direction TB
 
 **November 2nd Project Course Project Progress Report**
 ___
-1)
+1) Design of user interface.
+
 <img width="625" height="557" alt="image" src="https://github.com/user-attachments/assets/9bb9affa-5e1b-48ef-bd50-f2777663bce5" />
 
 The 8x8 board displays at the left. The board was implemented using a GridPane, and each cell in the grid was set to alternating colors between a light-square beige and dark-square green. Once implemented, pieces will display on the top two and bottom two rows, and the color of the pieces will reflect the chosen elements. Certain piece abilities may change the color of certain squares on the board, so there will need to be both a light-square and dark-square version of each elemental color included in the game. When the user clicks the "New Game" button at the right, the board and pieces will reset to its initial state, and each player will have the opportunity to choose their element for the next game. Once elements are selected, pieces will appear with the corresponding color selected by the player. Players will alternate moves until a game result is achieved. Once complete, the result will display on the screen until the user starts a new game.
 
-2) See below.
+2) Progress on Project Implementation.
+
+
+
+**public class Player** {
+
+//Represents a player with a name and element.
+
+private String name;
+
+private boolean movesFirst;
+
+private String element;
+
+//Constructor: Sets placeholder values for all player variables.
+
+public Player()
+
+{
+
+    name = "First Last";
+	
+    movesFirst = true;
+	
+    element = "Air";
+	
+}
+
+//Mutator for Player name.
+
+public void setName(String newName)
+
+{
+
+    name = newName;
+	
+}
+
+//Accessor for Player name.
+
+public String getName()
+
+{
+
+    return name;
+	
+}
+
+//Mutator for movesFirst.
+
+public void setMovesFirst()
+
+{
+
+    movesFirst = false;
+	
+}
+
+//Accessor for movesFirst.
+
+public boolean getMovesFirst()
+
+{
+
+    return movesFirst;
+	
+}
+
+//Mutator for Player Element.
+
+public void setElement(String newElement)
+
+{
+
+    element = newElement;
+	
+}
+
+//Accessor for PlayerElement;
+
+public String getElement()
+
+{
+
+    return element;
+	
+}
+
+}
+
+
+
+**public class Piece** {
+
+//Represents a piece of any type, player, or element.
+
+private String name;
+
+private boolean player;
+
+private String element;
+
+private String ability;
+
+//Constructor: Sets placeholders for each variable.
+
+public Piece()
+
+{
+
+name = "Pawn";
+
+player = true;
+
+element = "Air";
+
+ability = "None";
+
+}
+
+//Piece Name mutator.
+
+public void setName(String newName)
+
+{
+
+    name = newName;
+	
+}
+
+//Piece Name accessor.
+
+public String getName()
+
+{
+
+    return name;
+	
+}
+
+//Player mutator.
+
+public void setPlayer()
+
+{
+
+    player = false;
+	
+}
+
+//Player accessor.
+
+public boolean getPlayer()
+
+{
+
+    return player;
+	
+}
+
+//Piece element mutator.
+
+public void setElement(String newElement)
+
+{
+
+    element = newElement;
+	
+}
+
+//Piece element accessor.
+
+public String getElement()
+
+{
+
+    return element;
+	
+}
+
+//Piece ability mutator.
+
+public void setAbility(String newAbility)
+
+{
+
+    ability = newAbility;
+	
+}
+
+//Piece ability accessor.
+
+public String getAbility()
+
+{
+
+    return ability;
+	
+}
+
+}
+
+
 
 3) Checkpoint Plan
 
@@ -104,7 +307,7 @@ The 8x8 board displays at the left. The board was implemented using a GridPane, 
    
    -Implement the game resolution logic. When the game completes, the result will display on the screen. To complete by 11/29.
 
-5) Challenges and Solutions
+4) Challenges and Solutions
 
    |Challenge|Solution|
    |---|---|
